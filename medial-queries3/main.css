@@ -1,3 +1,74 @@
 body {
-  background: peachpuff;
+  background: palevioletred;
 }
+
+* {
+  border: 2px solid turquoise;
+  box-sizing: border-box;
+}
+
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: stretch;
+  min-height: 100vh;
+  font-size: 3em;
+  color: honeydew;
+}
+
+
+.wrap {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+
+}
+
+main {
+  flex-grow: 6;
+}
+
+header {
+  height: 4em;
+  margin: 1em;
+  width: 100%;
+}
+
+aside {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  flex-grow: 2;
+  justify-content: space-evenly;
+
+
+
+}
+
+
+aside>div {
+  width: 22%;
+  background: powderblue;
+  margin: 2vw;
+}
+
+
+@media (min-width:600px) {
+  .wrap {
+    flex-direction: row;
+  }
+
+  aside {
+    width: 70%;
+    align-items: center;
+    flex: 2;
+    margin-right: 1em;
+  }
+
+  aside>div {
+    height: 10em;
+  }
+
+  main{flex: 3;}
